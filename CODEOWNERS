@@ -1,0 +1,7 @@
+# Each line is a file pattern followed by one or more owners
+
+# By default, all files are owned by the idl-engineers and python-engineers teams
+* @maze-technology/idl-engineers @maze-technology/python-engineers
+
+# Github engineers
+.github/ @maze-technology/github-engineers
