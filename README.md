@@ -22,7 +22,7 @@ The script should be ran after the proto files have been generated and before th
 ## Usage
 
 ```bash
-python inject_protovalidate.py <smithy-root-dir> <proto-root-dir>
+python src/main/python/inject_protovalidate.py <smithy-root-dir> <proto-root-dir>
 ```
 
 ### Arguments
