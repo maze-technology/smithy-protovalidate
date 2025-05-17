@@ -1,0 +1,16 @@
+name: Enforce Reviewers on Main Branch for new releases
+
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review, synchronize]
+    branches:
+      - main
+
+jobs:
+  request-release-approval:
+    runs-on: ubuntu-latest
+    environment:
+      name: release
+    steps:
+      - name: Mark environment approval
+        run: echo "This PR to main requires Release approval"
