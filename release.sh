@@ -24,6 +24,12 @@ echo "🚀 Preparing to fast-forward $BASE_BRANCH from $SOURCE_BRANCH"
 
 # === Sync and check out base branch ===
 git fetch origin
+
+# Update SOURCE_BRANCH to match remote
+echo "📥 Updating $SOURCE_BRANCH to match remote..."
+git checkout $SOURCE_BRANCH
+git reset --hard origin/$SOURCE_BRANCH
+
 git checkout $BASE_BRANCH
 git reset --hard origin/$BASE_BRANCH
 
