@@ -9,7 +9,6 @@
   "packageRules": [
     {
       "matchManagers": ["github-actions"],
-      "schedule": ["every weekday"],
       "reviewers": ["maze-technology/infrastructure-engineers"]
     },
     {
@@ -20,7 +19,6 @@
         "requirements/**/*.txt"
       ],
       "rangeStrategy": "pin",
-      "schedule": ["every weekday"],
       "reviewers": ["maze-technology/engineers"]
     }
   ],
