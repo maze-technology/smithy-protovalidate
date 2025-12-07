@@ -19,6 +19,7 @@
         "requirements/*.txt",
         "requirements/**/*.txt"
       ],
+      "rangeStrategy": "pin",
       "schedule": ["every weekday"],
       "reviewers": ["maze-technology/engineers"]
     }
