@@ -1,0 +1,28 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "automerge": true,
+  "automergeType": "pr",
+  "pip_requirements": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "matchManagers": ["github-actions"],
+      "schedule": ["every weekday"],
+      "reviewers": ["maze-technology/infrastructure-engineers"]
+    },
+    {
+      "matchManagers": ["pip_requirements"],
+      "matchFileNames": [
+        "requirements.txt",
+        "requirements/*.txt",
+        "requirements/**/*.txt"
+      ],
+      "schedule": ["every weekday"],
+      "reviewers": ["maze-technology/engineers"]
+    }
+  ],
+  "dependencyDashboard": true,
+  "configMigration": true
+}
