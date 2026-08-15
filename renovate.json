@@ -1,11 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
-  ],
-  "baseBranches": [
-    "develop"
-  ],
+  "extends": ["config:recommended"],
+  "baseBranchPatterns": ["develop"],
   "automerge": true,
   "automergeType": "pr",
   "pip_requirements": {
@@ -13,26 +9,18 @@
   },
   "packageRules": [
     {
-      "matchManagers": [
-        "github-actions"
-      ],
-      "reviewers": [
-        "engineers/infrastructure-engineers"
-      ]
+      "matchManagers": ["github-actions"],
+      "reviewers": ["engineers/infrastructure-engineers"]
     },
     {
-      "matchManagers": [
-        "pip_requirements"
-      ],
+      "matchManagers": ["pip_requirements"],
       "matchFileNames": [
         "requirements.txt",
         "requirements/*.txt",
         "requirements/**/*.txt"
       ],
       "rangeStrategy": "pin",
-      "reviewers": [
-        "engineers"
-      ]
+      "reviewers": ["engineers"]
     }
   ],
   "dependencyDashboard": true,
