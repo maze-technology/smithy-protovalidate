@@ -3,6 +3,9 @@
   "extends": [
     "config:recommended"
   ],
+  "baseBranches": [
+    "develop"
+  ],
   "automerge": true,
   "automergeType": "pr",
   "pip_requirements": {
