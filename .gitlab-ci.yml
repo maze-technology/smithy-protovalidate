@@ -1,0 +1,20 @@
+# GitLab SoT CI for smithy-protovalidate (Python).
+# release_approval gates MRs into main (GitHub release-approval.yaml parity on CE).
+
+stages: [test]
+
+include:
+  - project: "data-platform/infrastructure-base"
+    ref: "develop"
+    file: "/ci/templates/release-approval.gitlab-ci.yml"
+
+python_test:
+  stage: test
+  image: python:3.12-alpine
+  script:
+    - pip install -r requirements.txt
+    - python -m unittest discover -s src/test/python -v
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == "develop"
+    - if: $CI_COMMIT_BRANCH == "main"
