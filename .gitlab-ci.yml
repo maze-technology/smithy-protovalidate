@@ -10,7 +10,7 @@ include:
 
 python_test:
   stage: test
-  image: python:3.12-alpine
+  image: python:3.14-alpine
   script:
     - pip install -r requirements.txt
     - python -m unittest discover -s src/test/python -v
