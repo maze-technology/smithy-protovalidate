@@ -5,7 +5,7 @@ stages: [test]
 
 include:
   - project: "data-platform/infrastructure-base"
-    ref: "develop"
+    ref: "v0.1.48"
     file: "/ci/templates/release-approval.gitlab-ci.yml"
 
 python_test:
